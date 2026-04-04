@@ -67,8 +67,11 @@ flights %>% filter(month==1, day<=15) %>%
 flights %>% filter(month==9,day<=15) %>% 
   write.xlsx("data/1st_15_days_of_september.xlsx") #readxl function
 
+#using the %in% operator
 
-
+flights %>% filter(dep_delay %in% dep_delay>=15)
+        
+  
 
 
 
