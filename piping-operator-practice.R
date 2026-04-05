@@ -70,7 +70,7 @@ flights %>% filter(month==9,day<=15) %>%
 #using the %in% operator
 
 flights %>% filter(dep_delay %in% dep_delay>=15)
-        
+flights %>% filter(month %in%c(4,5,7))       
   
 
 
