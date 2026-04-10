@@ -70,7 +70,12 @@ flights %>% filter(month==9,day<=15) %>%
 #using the %in% operator
 
 flights %>% filter(dep_delay %in% dep_delay>=15)
-flights %>% filter(month %in%c(4,5,7))       
+flights %>% filter(month %in%c(4,5,7)) 
+
+#find the flight data of 1st 15days of last quarter 
+flights %>% filter(month%in%c(10,11,12)& day%in%c(1:15)) %>% 
+  write.xlsx("data/1st-15-days-of-last-quarter.xlsx")
+
   
 
 
